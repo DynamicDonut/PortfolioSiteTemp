@@ -5,6 +5,10 @@ p {
   margin: 0;
 }
 
+h3 {
+  margin: 0 0 0.25em;
+}
+
 #container {
   height: 100vh;
   max-width: 100%;
@@ -13,12 +17,10 @@ p {
   justify-content: space-evenly;
 }
 
-#info, #options {
-  /*
-  width: 500px;
-  */
-  flex: 0 0 auto;
-  height: 100%;
+#info, #options, #projDisplay{
+  flex: 0 0 max-content;
+  display: block;
+  overflow: auto;
 }
 
 #info{
@@ -26,63 +28,185 @@ p {
   width: 59%;
 }
 
-#options {
+#options, #projDisplay{
   background-color: red;
   width: 41%;
+}
+
+#options {
   text-align: center;
-  overflow-y: scroll;
 }
 
 #social {
   width: 95%;
-  height: 10%;
+  height: 18%;
+  min-height: 70px;
+  text-align: center;
+  background-color: blue;
+}
+
+#logo {
+  height: 100%;
+  margin-right: 2em;
+}
+
+.soc_icon {
+  height: 50%;
+  margin-right: 2%;
+  vertical-align: middle;
+  transition: fill 200ms ease-out;
+}
+
+.soc_twit:hover {
+  fill: #1DA1F3;
+} 
+.soc_insta:hover {
+  fill: #F58529;
+} 
+.soc_twitch:hover {
+  fill: #6441A4;
+} 
+.soc_itch:hover {
+  fill: #FA5C5C;
+}
+.soc_tumb:hover {
+  fill: #35465C;
 }
 
 #navbar {
-  height: 85%;
+  margin-top: 8%;
+  min-height: 30%;
   display: flex; 
   flex-flow: column nowrap;
   justify-content: space-around; 
 }
 
-.nav, #social, #desc {
+.nav, .nav-content, #social, #desc {
   padding: .5em;
 }
 
+.nav-content {
+  width: 95%;
+  display: none;
+  margin: 0 auto .5em;
+}
+
+.nav-content img {
+  margin-right: .75vh;
+  margin-bottom: .75vh;
+  max-width: 25%;
+}
+
 #social, #desc{
-  margin: 1vh auto;
+  margin: 3vh auto 1vh;
 }
 
 #desc {
   text-align: left;
+  list-style-type: georgian;
   width: 95%;
+  background-color: purple;
 }
 
-#sitepic {
+#sitepic, #projGallery {
+  background-color: green;
   max-width: 90%;
   text-align: center;
   margin: 0 auto 2%;
-  height: 78%;
+}
+
+#sitepic img{
+  max-width: 100%;
+  height: auto;
+  max-height: 475px;
 }
 
 .nav {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin: 0 auto .5em;
   width: 95%;
   max-width: 95%;
-  height: 4.5em;
+  height: 3.5em;
   background-color: white;
 }
 
-.pub_games {
-  background-color: green;
+/*--------------------------*/
+
+#projName, #projDesc {
+  margin: 0 auto 2vh;
+  width: 90%;
+}
+
+#projRole, #projTool {
+  margin: 0 auto 0;
+  width: 90%;
+}
+
+#projName h1 {
+  margin: none;
+}
+
+#projTool h3 {
+  margin-bottom: 1em;
+}
+
+/*--------------------------*/
+
+#projGallery{
+  height: 40vh;
+  position: relative;
+}
+
+.galleryCell {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:0;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
    ========================================================================== */
 
-@media only screen and (max-width: 480px) {
-    /* insert styles here */
+/* == In-Between Browser Setting == */   
+@media only screen and (max-width: 680px) {
+  #social {
+    height: auto;
+  }
+
+  #logo {
+    height: 18vh;
+    margin: 0 33% 4%;
+  }
+
+  .soc_icon {
+    width: 15%;
+  }
+}
+
+/* == Mobile Browser Setting == */   
+@media only screen and (max-width: 495px) {
+  #container {
+    flex-flow: column nowrap;
+  }
+
+  #navbar {
+    margin-top: 3%;
+  }
+
+  #info, #options{
+    width: 100vw;
+  }
+
+  #desc, #sitepic{
+    list-style-type: none;
+    margin-top: 1.5vh;
+  }
 }
 
 /* ==========================================================================
@@ -98,7 +222,8 @@ p {
 .hidden {
     display: none !important;
     visibility: hidden;
-}
+    transition: all 0.9s ease-out 0s;
+  }
 
 /* Clearfix
  * Adding a 'clearfix' class will allow parent elements to contain a floated child element

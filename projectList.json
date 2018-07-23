@@ -1,0 +1,21 @@
+{
+	"projects":[
+		{
+			"name": "Red Panda Yarn Bowl",
+			"label": "pub_games",
+			"image": "sonic_3",
+			"desc": "A 3D printed yarn bowl I designed for a friend as a wedding gift. I designed the side of it to include an imprint of a red panda, as it is her favorite animal. I first sketched out the face on paper, scanned and retraced in Adobe Illustrator then modeled the bowl and imprint in Fusion 360. The final model was printed on the Ultimaker 2+ using Hatchbox White PLA.",
+			"tools": "Adobe Illustrator, AutoDesk Fusion360",
+			"role": "Designer",
+			"gallery": "yarnbowl"
+		}, {
+			"name": "Submarine Shreddin'",
+			"label": "pub_games",
+			"image": "project",
+			"desc": "A FZero-inspired submarine racing time trial game, made in little over two weeks for the 2017 LOWREZJAM game jam. The game's code was written in C# for Unity, with much of the art taking on Super Nintendo and Game Boy Advance spritework as inspiration. I primarily did most of the code and art, while my friend OneWeirdGuy did the sprites for the ship, while the music and fonts were from outside sources.",
+			"tools": "Unity, C#, Adobe Photoshop",
+			"role": "Coder, Artist, Designer",
+			"gallery": "subshred"
+		}
+	]
+}
