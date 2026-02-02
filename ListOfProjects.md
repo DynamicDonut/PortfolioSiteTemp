@@ -1,5 +1,5 @@
 ### Games I'm Working On
-	- Quiz Quest
+	- Quizzing Quest
 	- Project Cooking Shooter
 
 ### Games 
