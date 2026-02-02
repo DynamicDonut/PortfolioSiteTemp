@@ -24,12 +24,12 @@ h3 {
 }
 
 #info{
-  background-color: orange;
+  background-color: darkred;
   width: 59%;
 }
 
 #options, #projDisplay{
-  background-color: red;
+  background-color: blue;
   width: 41%;
 }
 
